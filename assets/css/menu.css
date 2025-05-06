@@ -1,0 +1,69 @@
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1; /*Trazer para frente*/
+    border-bottom: 0.1rem solid var(--light-gray-color);
+}
+
+.menu-spacing {
+    height: 6.5rem;
+}
+
+.menu h1 {
+    font-size: 2.3rem;
+    color: var(--primary-color)
+}
+
+.menu h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a {
+    display: block;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    position: relative;
+}
+
+.menu-content {
+    display: flex; /*Deixar a tela da seção flexível*/
+    justify-content: center; /*separar blocos pelos extremos do lado*/
+    align-items: center; /*centrralizar itens*/
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.menu ul li a::after{ /*efeito de barra ao passar o mouse*/
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--secunday-color);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after { /*efeito de barra ao passar o mouse*/
+    width: 50%;
+    left: 25%;
+}
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+
+
+
+
